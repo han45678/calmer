@@ -1,6 +1,6 @@
 <template>
   <article class="s9 relative" id="s9">
-		<img src="./s1/logo.svg" class="logo">
+		<!-- <img src="./s1/logo.svg" class="logo"> -->
 		<img src="./s9/l.png" class="l">
 		<img src="./s9/txt.svg" class="txt">
     

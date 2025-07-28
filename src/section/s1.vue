@@ -1,80 +1,138 @@
 <template>
   <article class="s1 relative" id="s1">
-		<!--  --><img src="./s1/mo.jpg" class="t0">
-		<img src="./s1/tl.svg" class="topl">
-		<img src="./s1/logo.svg" class="logo" data-aos="fade-up" data-aos-delay="0">
-    <div class="t1" data-aos="fade-up" data-aos-delay="200">大坪林雙捷運｜第一環正核心｜居遊1-4房</div>
-    
+    <div class="bg">
+      <img src="https://xcatx7.github.io/pics/calmer-1.png" class="pc">
+      <img src="https://xcatx7.github.io/pics/calmer-1m.png" class="mo">
+    </div>
   </article>
 </template>
 
-<style lang="scss" scoped>  
+<style lang="scss" scoped>
 @import '@/assets/style/function.scss';
 
 
 
 .s1 {
- // @apply relative w-full h-screen;
-  // height: size(1080);
-  min-height: size(900);
-  max-height: size(1080);
+  width: 100%;
   height: 100vh;
-  font-size:size(40);
-  color: #FFF;
-  line-height: 1.5;
-  display: flex;
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
-  background: url("./s1/bg.svg");
-  background-position: 50% 50%;
-  background-size:cover;
-  // overflow: hidden;
-  // background: #0005;
-
-
-  .t0{position: absolute;width: 100%;top: 0;left: 0; 
-	pointer-events: none;opacity: 0.0;z-index: 50;}
-  .logo{position: absolute;left: 0;right: 0;top:calc(50% + #{size(363 - 1080 * .5)});
-    width: size(501);margin: auto;}
-  .t1{position: absolute;left: 0;right: 0;top:calc(50% + #{size(765 - 1080 * .5)});margin: auto;text-align: center;font-size:size(70);font-weight: 700;}
-  .topl{position: absolute;top:size(60);left: 0;width:size(260);}
   
-}
+  .bg {
+    background: url("https://xcatx7.github.io/pics/calmer-bg.jpg") 50% 50%;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
 
-  
-/* 螢幕尺寸標準 */
-/* 平板尺寸 */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {}
+  .mo {
+    display: none;
+  }
 
-@media screen and (max-width: 767px) {
+  @media screen and (max-width: 767px) {
+    .bg {
+      background-image: url("https://xcatx7.github.io/pics/calmer-bgm.jpg");
+      height: auto;
+      aspect-ratio: 375/604;
+    }
 
-  .s1 {
-    // height:calc(100vh - 63px);
-    height: sizem(604);
-    min-height: sizem(604);
-    max-height: sizem(604);
-    font-size:sizem(23);
-    
-  background-image: url("./s1/bgm.svg");
-  background-position: 48% 50%;
-  background-size:265% 100%;
-    .logo{width:sizem(210);top:sizem(260);}
-    .t1{font-size:sizem(17);top:sizem(410);}
-    .topl{top:0;width:sizem(150);}
+    .pc {
+      display: none;
+    }
+
+    .mo {
+      display: block;
+    }
+  }
+
+  img {
+    position: relative;
+    object-fit: cover;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+  }
+
+  //以下是動態部分 . 以上模擬背景跟文字
+  .bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(8px);
+    background:
+      linear-gradient(to bottom right, #fff, #BDFBFF99 20%, #BDFBFF00 50%) bottom right / 50% 50% no-repeat,
+      linear-gradient(to bottom left, #fff, #BDFBFF99 20%, #BDFBFF00 50%) bottom left / 50% 50% no-repeat,
+      linear-gradient(to top left, #fff, #BDFBFF99 20%, #BDFBFF00 50%) top left / 50% 50% no-repeat,
+      linear-gradient(to top right, #fff, #BDFBFF99 20%, #BDFBFF00 50%) top right / 50% 50% no-repeat;
+    animation: bg 6s linear infinite, origin 6s linear infinite;
+    opacity: 0;
+  }
+
+  @keyframes bg {
+    0% {
+      transform: scale(5, .05)translate(0%, 50%);
+      opacity: 0;
+    }
+
+    6% {
+      transform: scale(.6, .5)translate(0%, 50%);
+    }
+
+    12% {
+      transform: scale(.3, 5)translate(0%, 50%);
+      opacity: 1;
+    }
+
+    20% {
+      transform: scale(.1, 10)translate(0%, 0%);
+      opacity: .5;
+    }
+
+    25% {
+      transform: scale(.4, .5)translate(0%, 0%);
+      opacity: .5;
+    }
+
+    30% {
+      transform: scale(5, .05)translate(0%, 0%);
+      opacity: 0;
+    }
+  }
+
+  @keyframes origin {
+    0% {
+      transform-origin: 50% 100%;
+    }
+
+    12% {
+      transform-origin: 50% 100%;
+    }
+
+    20% {
+      transform-origin: 50% 43%;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    @keyframes origin {
+      0% {
+        transform-origin: 50% 100%;
+      }
+
+      12% {
+        transform-origin: 50% 100%;
+      }
+
+      20% {
+        transform-origin: 50% 36%;
+      }
+    }
+
   }
 }
 </style>
-<script setup>
-import { computed, getCurrentInstance, ref ,inject} from 'vue';
-const globals = getCurrentInstance().appContext.config.globalProperties;
-
-const isMobile = computed(() => globals.$isMobile());
-
-const smoothScroll = inject('smoothScroll')
-const scrollTo = (el) => {
-  smoothScroll({
-    scrollTo: document.querySelector(el)
-  })
-}
-</script>
