@@ -1,21 +1,31 @@
+<script setup>
+
+</script>
+
 <template>
-  <article class="s1 relative" id="s1">
-    <div class="bg">
-      <img src="https://xcatx7.github.io/pics/calmer-1.png" class="pc">
-      <img src="https://xcatx7.github.io/pics/calmer-1m.png" class="mo">
+  <article class="s1" id="s1">
+    <div class="bg-wrapper">
+      <div class="bg">
+        <img src="https://xcatx7.github.io/pics/calmer-1.png" class="pc" />
+        <img src="https://xcatx7.github.io/pics/calmer-1m.png" class="mo" />
+      </div>
     </div>
   </article>
 </template>
 
+
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
-
-
-
 .s1 {
   width: 100%;
-  height: 100vh;
-  
+  position: relative;
+
+  .bg-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+  }
+
   .bg {
     background: url("https://xcatx7.github.io/pics/calmer-bg.jpg") 50% 50%;
     background-size: cover;
@@ -32,6 +42,11 @@
   }
 
   @media screen and (max-width: 767px) {
+    .bg-wrapper {
+      aspect-ratio: 375 / 604;
+      min-height: auto;
+    }
+
     .bg {
       background-image: url("https://xcatx7.github.io/pics/calmer-bgm.jpg");
       height: auto;

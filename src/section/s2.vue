@@ -1,7 +1,8 @@
 <template>
   <article class="s2">
-    <img src="./s2/bg.jpg" alt="bg" class="bg">
-
+    <img src="./s2/bg.jpg" alt="bg" class="bg hidden md:block">
+    <img src="./s2/bg_m.jpg" alt="bg" class="bg block md:hidden">
+    
     <img src="./s2/title.svg" alt="title" class="title hidden md:block" data-aos="fade-up">
     <img src="./s2/title_m.svg" alt="title" class="title block md:hidden" data-aos="fade-up">
 
@@ -30,7 +31,8 @@
     right: 0;
     top: size(100);
     @media screen and (max-width: 767px) {
-      max-width: calc(100% - 60px);
+      max-width: sizem(310);
+      top: sizem(60);
     }
   }
 
@@ -42,8 +44,8 @@
     right: 0;
     bottom: 0;
     @media screen and (max-width: 767px) {
-      max-width: sizem(150);
-      bottom: sizem(100);
+      max-width: sizem(148);
+      bottom: sizem(92);
     }
   }
 
@@ -55,10 +57,9 @@
     right: 0;
     bottom: size(100);
     @media screen and (max-width: 767px) {
-      max-width: calc(100% - 60px);
+      max-width: sizem(310);
+      bottom: sizem(60);
     }
   }
-
- 
 }
 </style>
