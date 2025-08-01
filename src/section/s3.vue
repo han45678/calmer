@@ -21,6 +21,7 @@
 .s3 {
   width: 100%;
   position: relative;
+  z-index: 1;
 
   .bg {
     width: 100%;
