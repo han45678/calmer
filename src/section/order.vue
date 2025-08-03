@@ -1,5 +1,5 @@
 <template>
-  <div id="order" class="order relative text-center bg-[#007550]">
+  <div id="order" class="order relative text-center">
     <div class="order-section">
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle"
@@ -11,18 +11,18 @@
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <label class="row name"><span>姓名<span>*</span></span>
+          <label class="row name">
             <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
               @input="(event) => (formData.name = event.target.value)" /></label>
 
-          <label class="row"><span>手機<span>*</span></span>
+          <label class="row">
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)" /></label>
 
           <!-- 動態 select 欄位產生 預算 用途 等 在index.js控制  -->
           <template v-for="(fieldData, fieldKey) in selectFields" :key="fieldKey">
             <label class="row">
-              <span>{{ fieldData.title }}<span v-if="fieldData.bypass">*</span></span>
+              
               <select class="select w-full rounded-none bg-white" v-model="formData[fieldKey]">
                 <option value="" disabled>{{ fieldData.hold }}</option>
                 <option v-for="option in fieldData.option" :value="option" :key="option">
@@ -34,14 +34,14 @@
           <!-- 動態 select end-->
 
           <!--  -->
-          <label class="row"><span>居住縣市</span>
+          <label class="row">
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>請選擇城市</option>
               <option v-for="city in cityList" :value="city.value" :key="city">
                 {{ city.label }}
               </option>
             </select></label>
-          <label class="row"><span>居住地區</span>
+          <label class="row">
             <select class="select w-full rounded-none" v-model="formData.area">
               <option value="" selected disabled>請選擇地區</option>
               <option v-for="area in areaList" :value="area.value" :key="area">
@@ -72,8 +72,8 @@
 
       <!-- Send -->
       <div class="sendall mt-8 mx-auto">
-        <button class="send hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
-          送出表單
+        <button class="send hover:scale-90 btn cursor-pointer font-['Noto_Serif_TC',sans-serif]" v-if="!submitted" @click="send" :disabled="sending">
+          確認送出
         </button>
         <div v-else class="send-load">
           <svg class="animate-spin h-5 w-5 text-[#fff]" xmlns="http://www.w3.org/2000/svg" fill="none"
@@ -101,7 +101,9 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-
+#order{
+  background-image: url(./order/bg.png);
+}
 .order-section {
   position: relative;
   // padding-top: size(406);
@@ -153,8 +155,8 @@
   }
 
   .order-title-img {
-    width: size(1186);
-    margin: size(80) auto size(35);
+    width: size(1240);
+    margin: size(100) auto size(70);
   }
 
   .order-subTitle {
@@ -174,11 +176,9 @@
   }
 
   .form {
-    width: size(920);
-    min-width: 750px;
-    //  height: 350px;
+    width: 100%;
+    max-width: size(1240);
     gap: size(80);
-    margin-top: size(45);
     margin-bottom: size(50);
     z-index: 50;
     align-items: stretch;
@@ -194,7 +194,10 @@
     .right {
       flex: 1;
       height: auto;
-      //  width: size(419);
+      textarea{
+        color: #fff;
+        font-size: size(20);
+      }
     }
 
     &::after {
@@ -206,8 +209,8 @@
     }
 
     .row {
-      background: #fff;
-      border: 1px solid #999;
+      border: 1px solid rgba(255, 255, 255, 0.80);
+      background: rgba(255, 255, 255, 0.10);
       color: #000;
       display: flex;
       width: 100%;
@@ -217,7 +220,7 @@
         width: 5.5em;
         text-align: left;
         padding-left: 1em;
-
+        color: #fff;
         >span {
           color: #F00; //font-size: 12px;
         }
@@ -225,8 +228,15 @@
 
       input,
       select {
-        background: inherit;
+        background-color: transparent;
         flex: 1;
+        color: #fff;
+        font-size: size(20);
+        font-weight: 400;
+        height: size(66);
+        &::placeholder{
+          color: #fff;
+        }
       }
 
       option {
@@ -234,9 +244,12 @@
       }
 
       select {
-        background: url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
-        background-size: auto 200%;
+        background: url(/src/section/form/select.svg) no-repeat 100% 100%;
+        background-size: auto 100%;
         transition: background .3s;
+        color: #fff;
+        font-size: size(20);
+        font-weight: 400;
 
         &:focus {
           background-position: calc(100% - .5em) 0%;
@@ -272,19 +285,17 @@
 
   .send {
     font-size: 20px;
-    letter-spacing: 0.9em;
+    letter-spacing: size(7.2);
     text-indent: 0.9em;
     color: #000;
-    background-color: #FFEB00;
-    //border: 1px solid #FFF9;
+    background: linear-gradient(90deg, #F5EAC9 0%, #DB9D5B 100%);
     border: 0;
     border-radius: .5em;
-
     width: 308px;
     height: 3.3em;
     line-height: 3.3;
     z-index: 10;
-    font-weight: 400;
+    font-weight: 700;
     position: relative;
   }
 

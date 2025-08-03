@@ -139,7 +139,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background: #FFEB00;
+      background: linear-gradient(90deg, #F5EAC9 0%, #DB9D5B 100%);
       color: #000;
       width: 100%;
       flex: 1;
