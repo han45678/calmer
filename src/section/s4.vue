@@ -1,23 +1,23 @@
 <template>
   <article class="s4 " ref="s4">
-    <img class="bg hidden md:block" src="./s4/bg.png" alt="bg">
-    <img class="bg block md:hidden" src="http://placehold.jp/375x730.jpg" alt="bg">
+    <img class="bg hidden md:block" src="./s4/bg.jpg" alt="bg">
+    <img class="bg block md:hidden" src="./s4/bg_m.jpg" alt="bg">
     <div class="wrapper">
       <div class="title">
-        <img class="hidden md:block" src="./s4/title.svg" alt="title">
-        <img class="block md:hidden" src="./s4/title_m.svg" alt="title">
+        <img data-aos="fade-up" class="hidden md:block" src="./s4/title.svg" alt="title">
+        <img data-aos="fade-up" class="block md:hidden" src="./s4/title_m.svg" alt="title">
       </div>
       <div class="pic">
-        <div class="item">
+        <div data-aos="fade-up" class="item">
           <img src="./s4/pic01.jpg" alt="pic">
           <p class="font-['Noto_Sans_TC',sans-serif]">實景圖</p>
         </div>
-        <div class="item">
+        <div data-aos="fade-up" class="item">
           <img src="./s4/pic02.jpg" alt="pic">
           <p class="font-['Noto_Sans_TC',sans-serif]">情境示意圖</p>
         </div>
       </div>
-      <div class="text">
+      <div class="text" data-aos="fade-up">
         <img class="hidden md:block" src="./s4/text.svg" alt="text">
         <img class="block md:hidden" src="./s4/text_m.svg" alt="text">
       </div>

@@ -231,9 +231,13 @@
         background-color: transparent;
         flex: 1;
         color: #fff;
-        font-size: size(20);
         font-weight: 400;
+        font-size: size(20);
         height: size(66);
+        @media screen and (max-width: 767px) {
+          font-size: sizem(12);
+          height: sizem(50);
+        }
         &::placeholder{
           color: #fff;
         }
@@ -250,6 +254,9 @@
         color: #fff;
         font-size: size(20);
         font-weight: 400;
+        @media screen and (max-width: 767px) {
+          font-size: sizem(12);
+        }
 
         &:focus {
           background-position: calc(100% - .5em) 0%;
@@ -384,7 +391,6 @@
       gap: sizem(15);
       margin-bottom: sizem(20);
       flex-direction: column;
-      margin-top: sizem(20);
 
       .left {
         width: 100%;
@@ -397,6 +403,10 @@
 
         .row {
           height: 7em;
+          @media screen and (max-width: 767px) {
+            font-size: sizem(12);
+            height: sizem(88);
+          }
         }
       }
 

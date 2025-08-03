@@ -4,11 +4,11 @@
     <img class="bg block md:hidden" src="./s3/bg_m.jpg" alt="bg" />
     <div class="text_content">
       <div class="title_wrapper">
-        <img class="title" src="./s3/title.svg" alt="title">
-        <img class="s_title" src="./s3/s_title.svg" alt="s_title">
+        <img data-aos="fade-up" class="title" src="./s3/title.svg" alt="title">
+        <img data-aos="fade-up" class="s_title" src="./s3/s_title.svg" alt="s_title">
       </div>
-      <img class="text hidden md:block" src="./s3/text.svg" alt="text">
-      <img class="text block md:hidden" src="./s3/text_m.svg" alt="text">
+      <img data-aos="fade-up" class="text hidden md:block" src="./s3/text.svg" alt="text">
+      <img data-aos="fade-up" class="text block md:hidden" src="./s3/text_m.svg" alt="text">
     </div>
     <p class="block md:hidden font-['Noto_Sans_TC',sans-serif]">情境示意圖</p>
     <img class="tree" src="./s3/tree.png" alt="tree">

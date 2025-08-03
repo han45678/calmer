@@ -3,21 +3,21 @@
     <img class="bg hidden md:block" src="./s5/bg.jpg" alt="bg">
     <img class="bg block md:hidden" src="./s5/bg_m.jpg" alt="bg">
     <div class="wrapper">
-      <div class="title">
+      <div class="title" data-aos="fade-up">
         <img class="hidden md:block" src="./s5/title.svg" alt="title">
         <img class="block md:hidden" src="./s5/title_m.svg" alt="title">
       </div>
       <div class="pic">
-        <div class="item">
+        <div class="item" data-aos="fade-up">
           <img src="./s5/pic.jpg" alt="pic">
           <p class="font-['Noto_Sans_TC',sans-serif]">實景圖</p>
         </div>
-        <div class="item">
+        <div class="item" data-aos="fade-up">
           <img class="hidden md:block" src="./s5/text.svg" alt="text">
           <img class="block md:hidden" src="./s5/text_m.svg" alt="text">
         </div>
       </div>
-      <div class="main_pic">
+      <div class="main_pic" data-aos="fade-up">
         <img src="./s5/main_pic.jpg" alt="text">
         <p class="font-['Noto_Sans_TC',sans-serif]">實景圖</p>
       </div>
@@ -47,6 +47,7 @@
     gap: size(35) size(45);
     max-width: size(1240);
     top: size(100);
+    align-items: flex-start;
 
     @media screen and (max-width: 767px) {
       gap: 0;

@@ -6,8 +6,8 @@
   <article class="s1" id="s1">
     <div class="bg-wrapper">
       <div class="bg">
-        <img src="https://xcatx7.github.io/pics/calmer-1.png" class="pc" />
-        <img src="https://xcatx7.github.io/pics/calmer-1m.png" class="mo" />
+        <img data-aos="zoom-in" data-aos-delay="600" src="https://xcatx7.github.io/pics/calmer-1.png" class="pc" />
+        <img data-aos="zoom-in" data-aos-delay="600" src="https://xcatx7.github.io/pics/calmer-1m.png" class="mo" />
       </div>
     </div>
   </article>
@@ -23,7 +23,10 @@
   .bg-wrapper {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: size(1120);
+    @media screen and (max-width: 767px) {
+      min-height: size(364);
+    }
   }
 
   .bg {

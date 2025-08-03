@@ -1,17 +1,19 @@
 <script setup>
-import { ref } from 'vue';
-
 const options = {
+  type: 'loop',
   arrows: true,
   autoplay: false,
-  type: 'loop',
-  autoWidth: true,
   pagination: false,
+  autoWidth: true,
   focus: 'center',
+  perPage: 3,
+  breakpoints: {
+    768: {
+      perPage: 1,
+      focus: false,
+    }
+  }
 }
-
-const prevRef = ref(null)
-const nextRef = ref(null)
 </script>
 
 <template>
@@ -19,15 +21,15 @@ const nextRef = ref(null)
     <div class="slider" data-aos="fade">
       <Splide ref="splide" class="slide" :options="options">
         <SplideSlide class="slide-item">
-          <img src="./s6/pic01.png" alt="img">
+          <img src="./s6/pic01.jpg" alt="img">
           <p class="font-['Noto_Sans_TC',sans-serif]">外觀實景拍攝</p>
         </SplideSlide>
         <SplideSlide class="slide-item">
-          <img src="./s6/pic01.png" alt="img">
+          <img src="./s6/pic02.jpg" alt="img">
           <p class="font-['Noto_Sans_TC',sans-serif]">外觀實景拍攝</p>
         </SplideSlide>
         <SplideSlide class="slide-item">
-          <img src="./s6/pic01.png" alt="img">
+          <img src="./s6/pic03.jpg" alt="img">
           <p class="font-['Noto_Sans_TC',sans-serif]">外觀實景拍攝</p>
         </SplideSlide>
       </Splide>
@@ -40,73 +42,99 @@ const nextRef = ref(null)
 
 .s6 {
   position: relative;
+
   .slider {
     .slide-item {
       width: auto;
+      height: size(1080);
       position: relative;
+      transition: width 0.3s;
       @media screen and (max-width: 767px) {
-          width: 100%;
-        }
+        height: sizem(437);
+      }
       img {
+        width: 100%;
+        height: 100%;
+        @media screen and (min-width: 768px) {
         filter: blur(4px) grayscale(0.6);
-        @media screen and (max-width: 767px) {
-          filter: unset;
+        transition: filter 0.3s;
         }
       }
-      p{
+
+      p {
         display: none;
         font-size: size(15);
         position: absolute;
         bottom: size(5);
         right: size(10);
+        color: #fff;
       }
+
+      &.is-visible {
+        width: 26%;
+
+        @media screen and (max-width: 767px) {
+          width: 100%;
+        }
+      }
+
       &.is-active {
         width: 48%;
+
         @media screen and (max-width: 767px) {
           width: 100%;
         }
 
         img {
-          transition: 0.3s;
           filter: unset;
         }
-        p{
+
+        p {
           display: block;
         }
       }
     }
   }
-  .splide__arrow{
+
+  .splide__arrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
     right: unset !important;
-    svg{
+    background-position: center;
+    background-repeat: no-repeat;
+
+    svg {
       display: none;
     }
+
     width: size(40);
     height: size(40);
+
     @media screen and (max-width: 767px) {
-        width: sizem(40);
-        height: sizem(40);
+      width: sizem(40);
+      height: sizem(40);
     }
 
-    &.splide__arrow--prev{
+    &.splide__arrow--prev {
       @media screen and (min-width: 768px) {
         left: calc(50% + (48% / 2));
         transform: translateY(-50%);
       }
+
       background-image: url(./s6/prev.svg);
       right:0 !important;
     }
-    &.splide__arrow--next{
+
+    &.splide__arrow--next {
       @media screen and (min-width: 768px) {
         left: calc(50% - (48% / 2));
         transform: translateX(-100%) translateY(-50%);
       }
+
       background-image: url(./s6/next.svg);
-      left:0 ;
+      left:0;
     }
   }
 }
