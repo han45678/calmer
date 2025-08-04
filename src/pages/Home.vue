@@ -38,6 +38,17 @@
 .fade-leave-to {
   opacity: 0;
 }
+.home{
+  &::before{content: "";position:fixed;top: 0;left: 0;bottom: 0;right: 0;
+background: url("@/section/form/bg.jpg");
+background-size: cover;
+
+@media screen and (max-width: 767px) {
+  background-image: url("@/section/form/bgm.jpg");
+}
+}
+
+}
 
 img {
   display: inline;
@@ -57,7 +68,7 @@ img {
   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
 }
 
-
+/*
 .txt {
   position: relative;
   font-weight: 400;
@@ -66,6 +77,7 @@ img {
   width: 100%;
   letter-spacing: 0.03em;
   text-align: justify;
+
 
   .title {
     font-size: 2.2em;
@@ -91,7 +103,7 @@ img {
   .desc {
     margin: 0 0 0;
   }
-}
+}*/
 
 .slider {
   @apply relative;

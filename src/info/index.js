@@ -1,7 +1,7 @@
-const caseName = "東基M1"
+const caseName = "善寬靜の界"
 
 export default {
-    caseid: "c6d5e013-7b31-4edf-88d2-fbc312df0612",
+    caseid: "eccd1852-d19e-4b3d-801f-2b33cef70420",
     //case_code: "dgm1",
     address1: "",//按鈕區的--- 如空白會只呈現地址
     address2: "",//map點下確認的--- 如空白會顯示"導航地址"
@@ -15,11 +15,13 @@ export default {
     houseInfos: [
         /*
         */
-        ["投資興建", "東基開發建設股份有限公司"],
-        ["建築設計", "康益利建築師"],
-        ["建照號碼", "113店建字第00408號"],
+        ["投資興建", "xxx"],
+        ["建築設計", "xxx"],
+        ["行銷企劃", "xxx"],
+        /*
         ["行銷企劃", "海沃創意行銷"], 
         ["經&ensp;紀&ensp;人", "林閔鴻(107)基市字第00167號"],
+        */
     ],
     gtmCode: ["GTM-KQ46V36N"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
@@ -43,16 +45,20 @@ export default {
           bypass:false,
         },
         budget: {
-          title: "購屋預算",
-          hold: "請選擇區間",
-          option: ["1500-2000萬","2000-2500萬","2500-3000萬","3000-3500萬","3500-4000萬","4000萬以上",],
+          title: "預約時段",
+          hold: "請選擇時段",
+          option: ["平日上午","平日下午","平日晚上","假日全天","全時段皆可聯絡"],
           bypass:false, //必填開啟使用
         },
         /*
         use_type: {
           title: "使用用途",
           hold: "請選擇用途",
-          option: ["自住", "投資", "租賃"]
+          option: ["自住", "投資", "租賃"]平日上午
+平日下午
+平日晚上
+假日全天
+全時段皆可聯絡
       },
         */
   },

@@ -3,12 +3,12 @@
     <img class="bg hidden md:block" src="./s3/bg.jpg" alt="bg" />
     <img class="bg block md:hidden" src="./s3/bg_m.jpg" alt="bg" />
     <div class="text_content">
-      <div class="title_wrapper">
-        <img data-aos="fade-up" class="title" src="./s3/title.svg" alt="title">
-        <img data-aos="fade-up" class="s_title" src="./s3/s_title.svg" alt="s_title">
+      <div class="title font-['Noto_Serif_TC',serif]">
+        <h2 class="t" data-aos="fade-up" data-aos-delay="0">高雄の心</h2>
+        <h3 class="subtitle" data-aos="fade-up" data-aos-delay="200">巨蛋×高鐵雙特區</h3>
       </div>
-      <img data-aos="fade-up" class="text hidden md:block" src="./s3/text.svg" alt="text">
-      <img data-aos="fade-up" class="text block md:hidden" src="./s3/text_m.svg" alt="text">
+      <div data-aos="fade-up" data-aos-delay="400" class="desc">城市最精華的生活圈，以巨蛋、新左營為 中心，坐擁3大百貨，近美式賣場好市多， 堪稱國際級購物機能；近自由、明誠商圈，步行即到自由黃昏市場，機能最成熟，生活 採買，一應俱全。
+      </div>
     </div>
     <p class="block md:hidden font-['Noto_Sans_TC',sans-serif]">情境示意圖</p>
     <img class="tree" src="./s3/tree.png" alt="tree">
@@ -22,68 +22,56 @@
   width: 100%;
   position: relative;
   z-index: 1;
+  color: #fff;
+  font-size:sizem(12);
+  line-height: 1.7;font-weight: 300;
+  @media screen and (min-width: 768px) {
+    font-size:size(20);
+  }
 
   .bg {
     width: 100%;
   }
 
   .text_content {
-    width: 100%;
     margin-right: auto;
     margin-left: auto;
     position: absolute;
-    left: 0;
-    right: 0;
     bottom: 0;
-    top: 0;
     margin: auto;
-    text-align: left;
-    padding-left: size(340);
-    margin-top: size(100);
+    text-align: justify;
+    left:size(340);
+    top: size(100);
+    width:size(477);
 
     @media screen and (max-width: 767px) {
       padding-left: 0;
-      max-width: sizem(310);
-      margin-top: sizem(30);
+    left:0;right: 0;
+      width:sizem(310);
+      top: sizem(30);
       display: flex;
       align-items: flex-start;
     }
 
     .title_wrapper {
-      
-      .title {
-        display: block;
-        margin-left: 0;
-        margin-bottom: size(20);
-
-        @media screen and (max-width: 767px) {
-          margin-bottom: sizem(10);
-          width: 100%;
-        }
-      }
-
-      .s_title {
-        display: block;
-        margin-left: 0;
-        margin-bottom: size(35);
-
-        @media screen and (max-width: 767px) {
-          margin-bottom: 0;
-          width: 100%;
-        }
-      }
-
       @media screen and (max-width: 767px) {
         width: 35%;
       }
     }
-
-    .text {
-      margin-left: 0;
+    .title{
+      margin-bottom: .5em;
+     .t{font-size: 1.8em;color:#F3D7A3; font-weight: 600;}
+     .sub{font-size: 1.19em;}
+      @media screen and (min-width: 768px) {
+        font-size: size(27);
+      }
+    }
+    .desc{
       @media screen and (max-width: 767px) {
         width: 65%;
-        padding-left: sizem(20);
+        padding-left:1em;
       }
+      
     }
   }
   
@@ -95,11 +83,19 @@
     color: #fff;
   }
 
+  @keyframes tree {
+  to {
+    transform: translate(0)
+  }
+}
   .tree{
     position: absolute;
     left: 0;
     bottom: size(-130);
     width: size(270);
+    animation: tree 5s ease-in-out alternate infinite;
+  transform: skewY(-4deg);
+  transform-origin: 0 50%;
     @media screen and (max-width: 767px) {
       bottom: sizem(-40);
       width: sizem(115);

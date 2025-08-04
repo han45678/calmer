@@ -28,7 +28,7 @@ const options = {
 <template>
   <article class="s7" ref="s7">
     <img class="bg hidden md:block" src="./s7/bg.jpg" alt="bg">
-    <img class="bg block md:hidden" src="./s7/bg_m.png" alt="bg">
+    <img class="bg block md:hidden" src="./s7/bg_m.jpg" alt="bg">
     <div class="wrapper">
       <div class="text">
         <div class="title">
@@ -43,10 +43,9 @@ const options = {
             <img class="block md:hidden" src="./s7/s_title_m.svg" alt="s_title">
           </h4>
         </div>
-        <p data-aos="fade-up">
-          <img class="hidden md:block" src="./s7/text.svg" alt="text">
-          <img class="block md:hidden" src="./s7/text_m.svg" alt="text">
-        </p>
+        <div data-aos="fade-up" data-aos-delay="800" class="desc">
+          「善寬建設」攜手菁英團隊「原東建築」， 共創北高雄全新地標建築。以「大和美學」，展現黃金比美學，線條 與分明的結構中，完整體現和諧風格， 米色系為基底的外觀，簡約調性寧靜優美。 襯映善寬核心：人、城市、土地共生的人本 精神。
+        </div>
       </div>
 
       <transition name="fade">
@@ -103,6 +102,13 @@ const options = {
 
 .s7 {
   position: relative;
+  color: #fff;
+  font-size:sizem(12);
+  line-height: 1.7;
+  text-align: justify;
+  @media screen and (min-width: 768px) {
+    font-size:size(20);
+  }
 
   .bg {
     width: 100%;
@@ -171,16 +177,11 @@ const options = {
         }
       }
 
-      p {
-        @media screen and (max-width: 767px) {
-          width: 72%;
-          box-sizing: border-box;
-          padding-left: sizem(30);
-        }
-
-        img {
-          width: 100%;
-        }
+      .desc{
+      @media screen and (max-width: 767px) {
+        width: 72%;
+        padding-left: sizem(30);
+      }
       }
     }
 

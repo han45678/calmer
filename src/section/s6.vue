@@ -4,9 +4,9 @@ const options = {
   arrows: true,
   autoplay: false,
   pagination: false,
-  autoWidth: true,
+  // autoWidth: true,
   focus: 'center',
-  perPage: 3,
+  perPage: 2,
   breakpoints: {
     768: {
       perPage: 1,
@@ -22,15 +22,15 @@ const options = {
       <Splide ref="splide" class="slide" :options="options">
         <SplideSlide class="slide-item">
           <img src="./s6/pic01.jpg" alt="img">
-          <p class="font-['Noto_Sans_TC',sans-serif]">外觀實景拍攝</p>
+          <p>外觀實景拍攝</p>
         </SplideSlide>
         <SplideSlide class="slide-item">
           <img src="./s6/pic02.jpg" alt="img">
-          <p class="font-['Noto_Sans_TC',sans-serif]">外觀實景拍攝</p>
+          <p>外觀實景拍攝</p>
         </SplideSlide>
         <SplideSlide class="slide-item">
           <img src="./s6/pic03.jpg" alt="img">
-          <p class="font-['Noto_Sans_TC',sans-serif]">外觀實景拍攝</p>
+          <p>外觀實景拍攝</p>
         </SplideSlide>
       </Splide>
     </div>
@@ -42,6 +42,7 @@ const options = {
 
 .s6 {
   position: relative;
+  background: #022D4C;
 
   .slider {
     .slide-item {
@@ -119,21 +120,23 @@ const options = {
 
     &.splide__arrow--prev {
       @media screen and (min-width: 768px) {
-        left: calc(50% + (48% / 2));
+        left: calc(50% + (27%));
         transform: translateY(-50%);
       }
 
       background-image: url(./s6/prev.svg);
+      background-size: contain;
       right:0 !important;
     }
 
     &.splide__arrow--next {
       @media screen and (min-width: 768px) {
-        left: calc(50% - (48% / 2));
+        left: calc(50% - (27%));
         transform: translateX(-100%) translateY(-50%);
       }
 
       background-image: url(./s6/next.svg);
+      background-size: contain;
       left:0;
     }
   }
