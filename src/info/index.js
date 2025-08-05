@@ -15,15 +15,15 @@ export default {
     houseInfos: [
         /*
         */
-        ["投資興建", "xxx"],
-        ["建築設計", "xxx"],
-        ["行銷企劃", "xxx"],
+        ["投資興建", "善寬建設"],
+        ["建築設計", "原東聯合事務所"],
+        ["行銷企劃", "自售"],
         /*
         ["行銷企劃", "海沃創意行銷"], 
         ["經&ensp;紀&ensp;人", "林閔鴻(107)基市字第00167號"],
         */
     ],
-    gtmCode: ["GTM-KQ46V36N"], // 可放置多個
+    gtmCode: ["GTM-00000"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
