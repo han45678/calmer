@@ -1,7 +1,7 @@
 <template>
   <article class="s3" ref="s3">
-    <img class="bg hidden md:block" src="./s3/bg.jpg" alt="bg" />
-    <img class="bg block md:hidden" src="./s3/bg_m.jpg" alt="bg" />
+    <img class="bg hidden md:block" src="./s3/bg.svg" alt="bg" />
+    <img class="bg block md:hidden" src="./s3/bgm.svg" alt="bg" />
     <div class="text_content">
       <div class="title font-['Noto_Serif_TC',serif]">
         <h2 class="t" data-aos="fade-up" data-aos-delay="0">高雄の心</h2>
@@ -31,6 +31,11 @@
 
   .bg {
     width: 100%;
+    background: url("./s3/bgm.jpg");
+    background-size:cover;
+    @media screen and (min-width: 768px) {
+      background-image:url("./s3/bg.jpg");
+    }
   }
 
   .text_content {

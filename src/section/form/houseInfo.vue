@@ -44,7 +44,6 @@
 // }
 .displaynone{display: none;}
 .house {
-    background-image: url(../order/bg.png);
    // height: auto;
     font-size: size(22);
    // height:4em;
