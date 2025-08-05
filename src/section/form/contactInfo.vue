@@ -139,7 +139,7 @@
     // min-width: 680px;
 
     .contact-item {
-      background: linear-gradient(90deg, #F5EAC9 0%, #DB9D5B 100%);
+      background: linear-gradient(90deg, #F5EAC9, #DB9D5B);
       color: #000;
       width: 100%;
       flex: 1;
@@ -149,17 +149,17 @@
       letter-spacing: 0em;
      // max-width: size(280);
       z-index: 1;
-      transition: all .3s;
+      //transition: all .3s;
       cursor: pointer;
       //border: 1px solid #C29267;
       gap: 1em;
 
       &:hover {
-        background: #bba739;
-        color: #000;
+        background: linear-gradient(90deg, #DB9D5B, #c0711c);
+        color: #FFF;
 
         img {
-          filter: invert(0%) sepia(1%) saturate(4%) hue-rotate(348deg) brightness(99%) contrast(101%);
+        filter: brightness(0) invert(1);
         }
       }
 
@@ -167,8 +167,8 @@
         max-width: 1.35em;
         height: auto;
         max-height: 1.35em;
-        filter: invert(0%) sepia(1%) saturate(4%) hue-rotate(348deg) brightness(99%) contrast(101%);
-        transition: all .5s;
+        filter: brightness(0) invert(0);
+        // transition: all .5s;
         margin: 0;
       }
 
@@ -242,9 +242,6 @@
     gap: sizem(1);
     box-shadow: 0 0 sizem(50) rgba(0, 0, 0, 0.501);
     background:linear-gradient(0deg, #F5EAC9 0%, #DB9D5B 100%);
-   //background:linear-gradient(180deg, #FF8BF3 , #6D1EDB );
-    //background:linear-gradient(180deg, #f575a6 , #652ccf );
-    // background:linear-gradient(180deg, #b2baff , #781297 );
 
 
     .contact-item {

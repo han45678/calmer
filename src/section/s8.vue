@@ -49,7 +49,7 @@ position: relative;
     @media screen and (max-width: 767px) {
       gap: sizem(40);
       max-width: sizem(310);
-      top: sizem(60);
+      top: sizem(40);
     }
   .title{
     position: relative;
@@ -61,7 +61,7 @@ position: relative;
     width: sizem(310);
    // top: sizem(55);
     font-size: sizem(12);
-    margin:0 0 1.5em;
+    margin:0 0 0;
      .t{font-size: 1.8em;color:#F3D7A3; font-weight: 600;}
      .sub{font-size: 1.19em;}
      .right{margin-bottom: .3em;}

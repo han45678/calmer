@@ -44,7 +44,7 @@
       <stop offset=".6" stop-color="#b28247"/>
       <stop offset="1" stop-color="#b2824700"/>
     </radialGradient>
-    <radialGradient id="lg3" cx="330" cy="690" r="280" gradientUnits="userSpaceOnUse">
+    <radialGradient id="lg3" cx="350" cy="720" r="270" gradientUnits="userSpaceOnUse">
       <stop offset=".2" stop-color="#fff"/>
       <stop offset=".8" stop-color="#fffc"/>
       <stop offset="1" stop-color="#fff0" />

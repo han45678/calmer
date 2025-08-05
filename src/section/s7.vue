@@ -51,14 +51,14 @@ const options = {
       <transition name="fade">
         <div v-if="!architectOpen" class="architect">
           <div class="item" @click="architect(0)">
-            <img src="./s7/pic1.png" alt="architect_pic">
+            <img src="./s7/pic3.png" alt="architect_pic">
           </div>
           <div class="item" @click="architect(1)">
             <img src="./s7/pic2.png" alt="architect_pic">
           </div>
           <div class="block md:hidden" style="width: 100%;" />
           <div class="item" @click="architect(2)">
-            <img src="./s7/pic3.png" alt="architect_pic">
+            <img src="./s7/pic1.png" alt="architect_pic">
           </div>
           <div class="item" @click="architect(3)">
             <img src="./s7/pic4.png" alt="architect_pic">
@@ -77,13 +77,13 @@ const options = {
         </button>
         <Splide ref="splide" class="slide" :options="options">
           <SplideSlide class="slide-item">
-            <img src="./s7/pic1.png" alt="architect_pic">
+            <img src="./s7/pic3.png" alt="architect_pic">
           </SplideSlide>
           <SplideSlide class="slide-item">
             <img src="./s7/pic2.png" alt="architect_pic">
           </SplideSlide>
           <SplideSlide class="slide-item">
-            <img src="./s7/pic3.png" alt="architect_pic">
+            <img src="./s7/pic1.png" alt="architect_pic">
           </SplideSlide>
           <SplideSlide class="slide-item">
             <img src="./s7/pic4.png" alt="architect_pic">
