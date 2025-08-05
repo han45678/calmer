@@ -41,7 +41,7 @@ export default {
         room_type: {
           title: "需求房型",
           hold: "請選擇房型",
-          option: ["1房", "2房", "3房", "4房"],
+          option: ["三房", "四房"],
           bypass:false,
         },
         budget: {
