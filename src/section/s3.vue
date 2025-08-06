@@ -4,10 +4,10 @@
     <img class="bg block md:hidden" src="./s3/bgm.svg" alt="bg" />
     <div class="text_content">
       <div class="title font-['Noto_Serif_TC',serif]">
-        <h2 class="t" data-aos="fade-up" data-aos-delay="0">高雄の心</h2>
-        <h3 class="subtitle" data-aos="fade-up" data-aos-delay="200">巨蛋×高鐵雙特區</h3>
+        <h2 class="t" data-aos="fade-up" data-aos-delay="400">高雄の心</h2>
+        <h3 class="subtitle" data-aos="fade-up" data-aos-delay="600">巨蛋×高鐵雙特區</h3>
       </div>
-      <div data-aos="fade-up" data-aos-delay="400" class="desc">城市最精華的生活圈，以巨蛋、新左營為 中心，坐擁3大百貨，近美式賣場好市多， 堪稱國際級購物機能；近自由、明誠商圈，步行即到自由黃昏市場，機能最成熟，生活 採買，一應俱全。
+      <div data-aos="fade-up" data-aos-delay="1000" class="desc">城市最精華的生活圈，以巨蛋、新左營為 中心，坐擁3大百貨，近美式賣場好市多， 堪稱國際級購物機能；近自由、明誠商圈，步行即到自由黃昏市場，機能最成熟，生活 採買，一應俱全。
       </div>
     </div>
     <p class="block md:hidden font-['Noto_Sans_TC',sans-serif]">情境示意圖</p>

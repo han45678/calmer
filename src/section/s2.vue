@@ -4,8 +4,9 @@
     <img src="./s2/bg_m.jpg" alt="bg" class="bg block md:hidden">
     
     <img src="./s2/pic.svg" alt="pic" class="pic" data-aos="fade-up" data-aos-delay="200">
-    <img src="./s2/l.png" alt="pic" class="l">
-
+    <div data-aos="fade-up" data-aos-delay="200">
+      <img src="./s2/l.png" alt="pic" class="l">
+    </div>
   <!--  -->
     <div class="title font-['Noto_Serif_TC',serif]"  data-aos="fade-up">
       <h2 class="t">善寬集團</h2>
@@ -14,7 +15,7 @@
       <h3 class="sub">上善若水，心寬致遠</h3>
     </div>
 
-    <div data-aos="fade-up" data-aos-delay="800" class="desc">
+    <div data-aos="fade-up" data-aos-delay="300" class="desc">
       我們以「善」為初心，希望將「和善予人」的理念深化至每一個領域。強調人與環境和諧共生，打造合宜的理想建築，選地皆以高綠覆、自然共存為原則，始終不變。
       <span class="link"></span><span class="jp">最善は水のごとし、心広く自由に</span>
     </div>
