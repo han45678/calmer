@@ -6,8 +6,8 @@ export default {
     address1: "",//按鈕區的--- 如空白會只呈現地址
     address2: "",//map點下確認的--- 如空白會顯示"導航地址"
     address: "高雄市左營區文育路2號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3681.4968170380785!2d120.3126966!3d22.6725421!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0513fe8e96a5%3A0x2552336a57d325ac!2zODEz6auY6ZuE5biC5bem54ef5Y2A5paH6IKy6LevMuiZnw!5e0!3m2!1szh-TW!2stw!4v1754208831827!5m2!1szh-TW!2stw",//嵌入的
-    googleLink: "https://maps.app.goo.gl/q3iXjwooPhmpAF6L6",//導航網址
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14725.846960352646!2d120.31029334065508!3d22.673848859844757!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e054395a07741%3A0x8d373f9a07842aaa!2z5ZaE5a-s6Z2c44Gu55WM!5e0!3m2!1szh-TW!2stw!4v1754474926117!5m2!1szh-TW!2stw",//嵌入的
+    googleLink: "https://maps.app.goo.gl/VPPvTGP9yBv8XZGb8",//導航網址
     phone: "07-3452888",
     fbLink: "https://facebook.com/61578713282064",
     fbMessage: "https://m.me/61578713282064",
