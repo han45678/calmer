@@ -5,10 +5,10 @@
 <template>
   <article class="s1 font-['Noto_Serif_TC',serif]" id="s1">
       <div class="bg">
-        <img data-aos="fade-up" data-aos-delay="200" src="./s1/building.png" class="building" />
+        <img data-aos="fade-up" data-aos-offset="-500" data-aos-delay="200" src="./s1/building.png" class="building" />
         <img data-aos="zoom-in" data-aos-delay="0" src="./s1/logo.svg" class="logo" />
         <div data-aos="zoom-in" data-aos-delay="600" class="t1"><span>起步即是</span><span>世界高度</span></div>
-        <div data-aos="zoom-in" data-aos-delay="800" class="t2"><span>巨蛋×微笑公園/3-4房</span><span class=" font-['Noto_Sans_TC',sans-serif]">即將公開．搶先預約</span></div>
+        <div data-aos="zoom-in" data-aos-offset="-200"  data-aos-delay="800" class="t2"><span>巨蛋×微笑公園/3-4房</span><span class=" font-['Noto_Sans_TC',sans-serif]">即將公開．搶先預約</span></div>
       </div>
   </article>
 </template>
