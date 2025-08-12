@@ -470,6 +470,9 @@ const send = () => {
 if (formData.gender) {
   formData.name = `${formData.name}(${formData.gender})`;
 }
+if (formData.msg.trim() === "") {
+    formData.msg = "無留言";
+  }
 
 
   // 验证必填字段
