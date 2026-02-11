@@ -4,30 +4,186 @@
 
 <template>
   <article class="s1 font-['Noto_Serif_TC',serif]" id="s1">
-      <div class="bg">
-        <img data-aos="fade-up" data-aos-offset="-500" data-aos-delay="200" src="./s1/building.png" class="building" />
-        <img data-aos="zoom-in" data-aos-delay="0" src="./s1/logo.svg" class="logo" />
-        <div data-aos="zoom-in" data-aos-delay="600" class="t1"><span>起步即是</span><span>世界高度</span></div>
-        <div data-aos="zoom-in" data-aos-offset="-200"  data-aos-delay="800" class="t2"><span>巨蛋×微笑公園/3-4房</span><span class=" font-['Noto_Sans_TC',sans-serif]">即將公開．搶先預約</span></div>
+    <!--  <img src="./s1/mo.png" class="t0" v-if="isMobile">
+    <img src="./s1/pc.jpg" class="t0" v-else>   -->
+    <div class="circle" data-aos="zoom-out">
+      <div class="circle_t">
+        <img src="./s1/l.png">
       </div>
+      <div class="circle_b">
+        <img src="./s1/l.png">
+      </div>
+    </div>
+    <img src="./s1/calmerm.png" class="calmer" alt="建築外觀實景拍攝合成" v-if="isMobile" data-aos="fade-up" >
+    <img src="./s1/calmer.png" class="calmer" alt="建築外觀實景拍攝合成" v-else data-aos="fade-up">
+    <img src="./s1/slogo.svg" class="slogo" alt="善寬建設" data-aos="fade-up" data-aos-delay="0">
+    <img src="./s1/logo.svg" class="logo" alt="logo" data-aos="fade-up" data-aos-delay="200">
+    <img src="./s1/tm.svg" class="t" alt="巨蛋x公園" v-if="isMobile" data-aos="fade-up" data-aos-delay="400">
+    <img src="./s1/t.svg" class="t" alt="巨蛋x公園" v-else data-aos="fade-up" data-aos-delay="400">
+
+    <div class="caption">建築外觀實景拍攝合成</div>
   </article>
 </template>
 
 
 <style lang="scss" scoped>
 @import '@/assets/style/function.scss';
+
 .s1 {
   width: 100%;
   height: sizem(604);
   position: relative;
-  font-size:sizem(12);
+  font-size: sizem(12);
   color: #fff;
+  background: linear-gradient(0deg, #97232A 0%, #8D1F26 11%, #79181D 41%, #6D1318 71%, #691217 100%);
+
   @media screen and (min-width: 768px) {
-    font-size:size(38);
-    height: calc(100vh + #{size(40)});
-    min-height:size(900);
-    max-height:size(1120);
+    font-size: size(38);
+    height: 100dvh;
+    min-height: size(900);
+    max-height: size(1080);
   }
+
+  .t0 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: .3;
+    pointer-events: none;
+    user-select: none;
+    z-index: 99;
+  }
+.circle{width: 100%;height: 100%;top: 0;left: 0;
+
+    @media screen and (min-width: 768px) {
+      width: 60%;
+    }
+
+
+}
+  .circle_t {
+    position: absolute;
+    top: sizem(-205);
+    left: sizem((375 - 410)*.5);
+    width: sizem(410);
+    aspect-ratio: 1/.9;
+    background: radial-gradient(65.29% 65.29% at 50% 98.44%, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 100%);
+    border-radius: 50%;
+
+    img {
+      width: 57%;
+      mix-blend-mode: screen;
+      position: absolute;
+      bottom: -4.5%;
+      left: 0;
+      right: 0;
+    }
+
+    @media screen and (min-width: 768px) {
+      top: size(-485);
+      top:calc(30% + #{size(-485 - 1080 * .3)});
+      left: size(156);
+      width: size(910);
+    }
+  }
+
+  .circle_b {
+    position: absolute;
+    transform: scaleY(-1);
+    bottom: sizem(-230);
+    left: sizem((375 - 420)*.5);
+    width: sizem(420);
+    aspect-ratio: 1/.9;
+    background: radial-gradient(65.29% 65.29% at 50% 98.44%, rgba(0, 0, 0, 0.40) 0%, rgba(0, 0, 0, 0.00) 100%);
+    border-radius: 50%;
+    border: 1px solid rgba(255, 164, 67, 0.20);
+
+    img {
+      width: 70%;
+      height: 25%;
+      mix-blend-mode: screen;
+      position: absolute;
+      bottom: -9%;
+      left: 0;
+      right: 0;
+    }
+
+    @media screen and (min-width: 768px) {
+      bottom: size(-700);
+      left: size(26);
+      width: size(1150);
+
+      img {
+        width: 67%;
+        height: 24%;
+        bottom: -8.5%;
+      }
+    }
+
+  }
+
+  .calmer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .slogo {
+    position: absolute;
+    top: sizem(16);
+    left: sizem(20);
+    width: sizem(75);
+
+    @media screen and (min-width: 768px) {
+      top: size(20);
+      left: size(30);
+      width: size(155);
+    }
+  }
+
+  .logo {
+    position: absolute;
+    top: sizem(55);
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: sizem(169);
+
+    @media screen and (min-width: 768px) {
+      top: size(94);
+      top:calc(30% + #{size(94 - 1080 * .3)});
+      left: size(432);
+      width: size(379);
+      right: auto;
+    }
+  }
+
+  .t {
+    position: absolute;
+    top: sizem(186);
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: sizem(236);
+
+    @media screen and (min-width: 768px) {
+      top: size(105);
+      top:calc(35% + #{size(105 - 1080 * .35)});
+      right: size(397);
+      width: size(539);
+      left: auto;
+    }
+  }
+
+  .caption {
+    right: auto;
+    left: 1em;
+  }
+
+
+  /*
   .building{
     position: absolute;
     width:sizem(106);
@@ -189,6 +345,19 @@
       }
     }
 
-  }
+  }*/
 }
 </style>
+<script setup>
+import { computed, getCurrentInstance, ref, inject } from 'vue';
+const globals = getCurrentInstance().appContext.config.globalProperties;
+
+const isMobile = computed(() => globals.$isMobile());
+
+const smoothScroll = inject('smoothScroll')
+const scrollTo = (el) => {
+  smoothScroll({
+    scrollTo: document.querySelector(el)
+  })
+}
+</script>
